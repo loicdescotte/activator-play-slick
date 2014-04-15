@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Play Slick Template - Activator Template</title>
+</head>
+<body>
+  <div>
+      <p>You've just created a simple Play Framework application with the Slick library! 
+        <br/>
+        This template will help you building a classic Web app or a JSON API.</p>
+      <h2> View the App</h2>
+      <p>
+          Once the application has been compiled and the server started, your application can be accessed at: <a href="http://localhost:9000" target="_blank">http://localhost:9000</a><br/>
+      </p>
+  </div>
+  <div>
+      <h2>Slick Usage</h2>
+  </div>
+
+  <div>
+  In order to enable schema generation you can specify the packages or classes you want to have in the application.conf file.
+  The default value is : <pre> slick.default="models.*"</pre> 
+  <br/>
+  It follows the same format as the Ebean plugin: slick.default="models.*" means all Tables in the models package should be run on the default database.
+
+  It is possible to specify individual objects like: slick.default="models.Users,models.Settings"
+  </div>
+
+  <div>
+  The DB wrapper provided by play-slick is just a thin wrapper that uses Slick classes with databases defined in the Play Application . 
+
+  To see an example, check the Application.scala file from this template.
+
+  Using "import play.api.db.slick.Config.driver.simple._" will import the driver defing with the key "db.default.driver" in application.conf, or the one set by the test helpers in test mode (see tests in this template as an example).
+  </div>
+
+  <div>
+    <h3>Execution context configuration</h3>
+  </div>
+
+  <div>
+  You may want to use a separated execution context to avoid blocking threads in the default thread pool. Play-slick provides a DBActionto handle this.
+  This thread pool configuration is available in application.conf (see the slick-context settings)  
+  </div>
+
+  <div>
+    If you need to use more advanced use cases (example : more than one database driver per mode (run or test)), please read the <a href="https://github.com/freekh/play-slick/wiki">play-slick wiki</a>
+  </div>
+
+</body>
+</html>
